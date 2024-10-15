@@ -4,7 +4,14 @@ mainText.style.opacity = 1;
 
 
 gsap.registerPlugin(ScrollTrigger);
+/* profile 섹션 고정 되게 */
 
+
+
+
+
+
+/* skill 섹션 */
 let sections = gsap.utils.toArray('.skill_container');
 
 gsap.to(sections, {
@@ -15,7 +22,7 @@ gsap.to(sections, {
         pin: true,
         scrub: 1,
         snap: 1 / (sections.length - 1),
-        start: "top-=110 top",
+        start: "top-=120 top",
         end: () => "+=" + document.querySelector(".skill").offsetWidth
     }
 });
@@ -24,15 +31,11 @@ gsap.to(sections, {
 gsap.to(".project_title", {
     scrollTrigger: {
       trigger: ".project",
-      start: "top-=110 top",
+      start: "top-=120 top",
       pin: true,
       end: () => "+=" + document.querySelector(".project").offsetHeight,
     }
 });
-
-
-
-
 
 
 /* project 섹션 (gpt 참고 해서 잘 안됨 수정 필요함) */
@@ -60,3 +63,6 @@ sections2.forEach((section) => {
     }
   });
 });
+
+
+
