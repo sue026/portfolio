@@ -1,0 +1,335 @@
+* {font-family: notosans, 'pretendard'; background-color: #000; color: #FFF;}
+body {
+   font-family: notosans, 'pretendard';
+}
+
+header {
+   display: flex;
+   position: fixed;
+   justify-content: center;
+   align-items: center;
+   padding: 0 20px;
+   margin: 0;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: black;
+   height: 100px;
+   font-family: 'pretendard';
+
+}
+
+.header_group {
+   display: flex;
+   width: 90%;
+   justify-content: space-between;
+}
+
+header h1 {
+
+}
+
+header h1 a {
+   display: block;
+   font-size: 24px;
+   color: #FFF;
+   z-index: 15;
+   text-decoration: none;
+   font-weight: 700;
+}
+
+header nav {
+
+}
+
+header nav ul#gnb {
+   display: flex;
+   margin: 0;
+   gap: 60px;
+   margin-right: 10px;
+}
+
+header nav ul#gnb>li {
+   position: relative;
+}
+
+header nav ul#gnb>li>a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 18px;
+   font-weight: 600;
+   color: #FFF;
+   text-decoration: none;
+   white-space: nowrap;
+}
+
+
+
+
+
+/* mainpage */
+
+.main_page {
+   position: relative;
+   width: 100%;
+   height: 80vh;
+}
+
+.main_page video {
+   margin-top: 100px;
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+
+
+.main_text {
+   font-family: 'pretendard';
+   position: absolute;
+   top: 63%;
+   left: 42%;
+   transform: translate(-50%, -50%);
+   color: black;
+   font-size: 100px;
+   font-weight: bold;
+   text-align: center;
+   z-index: 2;
+   opacity: 0;
+   transition: opacity 3s ease-in-out;
+}
+
+.main_text p {
+   line-height: 2;
+   color: #000;
+   background-color: #fff;
+}
+
+
+
+
+/* profile */
+.profile {
+   display: flex;
+   position: relative;
+   width: 100%;
+   height: 70vh;
+   justify-content: center;
+   align-items: center;
+   gap: 300px;
+   margin-top: 350px;
+   padding: 90px;
+   background-color: #000;
+   color: #FFF;
+   margin-bottom: 70px;
+   font-family: 'notosans';
+}
+
+.profile_title {
+   position: absolute;
+   top: 0%;
+   left: 9%;
+   font-size: 50px;
+   font-weight: bold;
+   color: #FFF;
+}
+
+/* 왼쪽 이미지 */
+.profile_left img {
+   max-width: 400px;
+   height: auto;
+   margin-left: 100px;
+}
+
+/* 오른쪽 정보 */
+.profile_right {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas:
+      "profile_name education"
+      "certificates experience";
+   width: 60%;
+   row-gap: 100px;
+}
+
+/* 이름, 전화번호, 생년월일, 이메일 */
+.profile_name {
+   grid-area: profile_name;
+}
+
+.profile_name li {
+   font-size: 20px;
+   font-weight: 700;
+   margin-bottom: 20px;
+   white-space: nowrap;
+}
+
+/* 학력 */
+.education {
+   grid-area: education;
+}
+
+.education li:first-child {
+   font-weight: bold;
+   font-size: 22px;
+   margin-bottom: 30px;
+}
+
+.education li {
+   font-size: 18px;
+   margin-bottom: 15px;
+}
+
+/* 자격증 */
+.certificates {
+   grid-area: certificates;
+}
+
+.certificates li:first-child {
+   font-weight: bold;
+   font-size: 22px;
+   margin-bottom: 30px;
+}
+
+.certificates li {
+   font-size: 18px;
+   margin-bottom: 15px;
+}
+
+/* 경력 */
+.experience {
+   grid-area: experience;
+}
+
+.experience li:first-child {
+   font-weight: bold;
+   font-size: 22px;
+   margin-bottom: 30px;
+}
+
+.experience li {
+   font-size: 18px;
+   margin-bottom: 15px;
+}
+
+
+
+
+/* skill */
+
+.skill {
+   display: flex;
+   flex-direction: row;
+   overflow: hidden;
+   width: 800vw;
+   background-color: #000;
+   color: #FFF;
+}
+
+.skill h2 {
+   position: absolute;
+   top: 20px;
+   left: 1.22%;
+   font-size: 50px;
+   font-weight: bold;
+   color: #FFF;
+   z-index: 10;
+}
+
+.skill_container {
+   display: flex;
+   flex-direction: row;
+   width: 100vw;
+   height: 70vh;
+   justify-content: center;
+   align-items: center;
+   margin-top: 100px;
+
+}
+
+.skill_left {
+   margin-right: 200px;
+}
+
+.skill img {
+   width: 300px;
+   height: 300px;
+}
+
+.skill_right {
+   max-width: 500px;
+   white-space: nowrap;
+   line-height: 4;
+}
+
+.skill_right h3 {
+   font-size: 32px;
+}
+
+.skill_right p {
+   font-size: 18px;
+}
+
+
+
+/* project */
+
+.project {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100vh;
+   margin-top: 100px;
+}
+
+.project_title {
+   position: absolute;
+   left: 10%;
+   font-size: 50px;
+   font-weight: bold;
+   color: #FFF;
+   z-index: 10;
+}
+
+.project_container {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   margin: auto;
+   width: 80vw;
+   height: 70vh;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 250px;
+}
+
+.project img {
+   width: 600px;
+   height: 400px;
+}
+
+.project_left {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+   font-size: 38px;
+   font-weight: 700;
+   gap: 150px;
+}
+
+.project_left .project_text {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   font-size: 20px;
+   font-weight: 500;
+   gap: 50px;
+   align-items: center;
+}
