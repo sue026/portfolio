@@ -15,15 +15,15 @@ gsap.registerPlugin(ScrollTrigger);
 let sections = gsap.utils.toArray('.skill_container');
 
 gsap.to(sections, {
-    xPercent: -100 * (sections.length - 1),
+    xPercent: -100 * (sections.length - 2),
     ease: "none",
     scrollTrigger: {
         trigger: ".skill",
         pin: true,
         scrub: 1,
-        snap: 1 / (sections.length - 1),
+        // snap: 1 / (sections.length - 1),
         start: "top-=120 top",
-        end: () => "+=" + document.querySelector(".skill").offsetWidth
+        // end: () => "+=" + document.querySelector(".skill").offsetWidth
     }
 });
 
